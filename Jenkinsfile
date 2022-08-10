@@ -18,7 +18,7 @@ pipeline {
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t "mohammedalthobaiti/runaway:latest" RUNaWAY/'
+				sh 'docker build -t "mohammedalthobaiti/runaway:latest" .'
 			}
 		}
 
