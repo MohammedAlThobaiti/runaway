@@ -6,6 +6,7 @@ pipeline {
   AWS_ACCESS_KEY_ID     = credentials('MohammedAlThobaiti-aws-secret-key-id')
   AWS_SECRET_ACCESS_KEY = credentials('MohammedAlThobaiti-aws-secret-access-key')
   DOCKER_HUB_TOKEN = credentials('MohammedAlThobaiti-dockerhub-token')
+		DOCKER_HUB_USER= 'mohammedalthobaiti'
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
 		AWS_S3_BUCKET = 'mohammedalthobaiti-belt2-artifacts-123456'
 		AWS_EB_APP_NAME = 'MohammedAlThobaiti'
@@ -25,7 +26,7 @@ pipeline {
 		stage('Login') {
 
 			steps {
-				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+				sh 'docker login -u=$DOCKER_HUB_USER -p=$DOCKER_HUB_TOKEN'
 			}
 		}
 
