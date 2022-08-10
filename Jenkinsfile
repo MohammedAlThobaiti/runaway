@@ -3,8 +3,8 @@ pipeline {
 	agent any
 
 	environment {
-  AWS_ACCESS_KEY_ID     = credentials('Mohammed-aws-secret-key-id')
-  AWS_SECRET_ACCESS_KEY = credentials('Mohammed-aws-secret-access-key')
+  AWS_ACCESS_KEY_ID     = credentials('MohammedAlThobaiti-aws-secret-key-id')
+  AWS_SECRET_ACCESS_KEY = credentials('MohammedAlThobaiti-aws-secret-access-key')
   DOCKER_HUB_TOKEN = credentials('MohammedAlThobaiti-dockerhub-token')
 		ARTIFACT_NAME = 'Dockerrun.aws.json'
 		AWS_S3_BUCKET = 'mohammedalthobaiti-belt2-artifacts-123456'
@@ -51,3 +51,4 @@ pipeline {
 	}
 
 }
+
